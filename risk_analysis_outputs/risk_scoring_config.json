@@ -1,0 +1,176 @@
+{
+  "model_file": "reproduced_final_event_classifier.joblib",
+  "model_sha256_verified": "092756498ea87c18276985493b807eeb4765fdf6827cd0aeee7f6c7fb2301268",
+  "feature_list": [
+    "ax_kf_mean",
+    "ax_kf_std",
+    "ax_kf_min",
+    "ax_kf_max",
+    "ay_kf_mean",
+    "ay_kf_std",
+    "ay_kf_min",
+    "ay_kf_max",
+    "az_kf_mean",
+    "az_kf_std",
+    "az_kf_min",
+    "az_kf_max",
+    "roll_mean",
+    "roll_std",
+    "roll_min",
+    "roll_max",
+    "pitch_mean",
+    "pitch_std",
+    "pitch_min",
+    "pitch_max",
+    "yaw_mean",
+    "yaw_std",
+    "yaw_min",
+    "yaw_max",
+    "speed_mean",
+    "speed_std",
+    "speed_min",
+    "speed_max",
+    "acc_xy_mag_std"
+  ],
+  "split": {
+    "development_trips": [
+      "20151110175712-16km-D1-NORMAL1-SECONDARY",
+      "20151110180824-16km-D1-NORMAL2-SECONDARY",
+      "20151111123124-25km-D1-NORMAL-MOTORWAY",
+      "20151111125233-24km-D1-AGGRESSIVE-MOTORWAY",
+      "20151111134545-16km-D1-AGGRESSIVE-SECONDARY",
+      "20151120131714-26km-D2-NORMAL-MOTORWAY",
+      "20151120133502-26km-D2-AGGRESSIVE-MOTORWAY",
+      "20151120135152-25km-D2-DROWSY-MOTORWAY",
+      "20151120160904-16km-D2-NORMAL1-SECONDARY",
+      "20151120162105-17km-D2-NORMAL2-SECONDARY",
+      "20151120164606-16km-D2-DROWSY-SECONDARY",
+      "20151126110502-26km-D3-NORMAL-MOTORWAY",
+      "20151126125458-16km-D3-NORMAL2-SECONDARY",
+      "20151126130707-16km-D3-AGGRESSIVE-SECONDARY",
+      "20151126134736-26km-D3-AGGRESSIVE-MOTORWAY",
+      "20151203171800-16km-D4-NORMAL1-SECONDARY",
+      "20151203173103-17km-D4-NORMAL2-SECONDARY",
+      "20151203174324-16km-D4-AGGRESSIVE-SECONDARY",
+      "20151203175637-17km-D4-DROWSY-SECONDARY",
+      "20151204152848-25km-D4-NORMAL-MOTORWAY",
+      "20151209151242-25km-D5-NORMAL-MOTORWAY",
+      "20151209153137-25km-D5-AGGRESSIVE-MOTORWAY",
+      "20151211160213-25km-D5-DROWSY-MOTORWAY",
+      "20151211162829-16km-D5-NORMAL1-SECONDARY",
+      "20151211164124-17km-D5-NORMAL2-SECONDARY",
+      "20151211165606-12km-D5-AGGRESSIVE-SECONDARY",
+      "20151211170502-16km-D5-DROWSY-SECONDARY",
+      "20151217162714-26km-D6-NORMAL-MOTORWAY",
+      "20151217164730-25km-D6-DROWSY-MOTORWAY",
+      "20151221113846-16km-D6-DROWSY-SECONDARY"
+    ],
+    "heldout_trips": [
+      "20151111132348-25km-D1-DROWSY-MOTORWAY",
+      "20151111135612-13km-D1-DROWSY-SECONDARY",
+      "20151120163350-16km-D2-AGGRESSIVE-SECONDARY",
+      "20151126113754-26km-D3-DROWSY-MOTORWAY",
+      "20151126124208-16km-D3-NORMAL1-SECONDARY",
+      "20151126132013-17km-D3-DROWSY-SECONDARY",
+      "20151204154908-25km-D4-AGGRESSIVE-MOTORWAY",
+      "20151204160823-25km-D4-DROWSY-MOTORWAY",
+      "20151221112434-17km-D6-NORMAL-SECONDARY",
+      "20151221120051-26km-D6-AGGRESSIVE-MOTORWAY"
+    ],
+    "development_rows": 23013,
+    "heldout_rows": 8042
+  },
+  "axis_direction_diagnostic": {
+    "feature_extraction_evidence": "The feature notebook identifies ax as longitudinal but does not document forward-positive versus forward-negative polarity.",
+    "development_only_check": "Compare per-trip median ax_kf_mean for actual Acceleration and Braking windows; this check is used only to assess axis direction.",
+    "development_trip_count": 30,
+    "trips_with_both_event_classes": 18,
+    "acceleration_median_ax_kf_mean": -0.0135499999999999,
+    "braking_median_ax_kf_mean": -0.01715,
+    "global_median_difference_acceleration_minus_braking": 0.003600000000000098,
+    "trips_with_positive_difference": 12,
+    "trips_with_negative_difference": 6,
+    "trips_with_zero_difference": 0,
+    "reliable_direction": false,
+    "polarity": null,
+    "fallback": "Use max(abs(ax_kf_min), abs(ax_kf_max)) for both event types; this is a longitudinal-excursion proxy, not signed deceleration or acceleration intensity."
+  },
+  "longitudinal_intensity": "absolute longitudinal excursion proxy for both braking and acceleration; the feature code marks ax longitudinal but does not establish sign, and development per-trip medians disagree.",
+  "calibration": {
+    "source": "Reproduced classifier predictions and sensor features from development trips only; behavior and event labels are not used for calibration.",
+    "quantile": 0.9,
+    "frequency_scales": {
+      "Braking": 0.03824050751002892,
+      "Acceleration": 0.028967254408060455,
+      "Turning": 0.02686900522390839
+    },
+    "nonzero_frequency_trip_counts": {
+      "Braking": 25,
+      "Acceleration": 21,
+      "Turning": 27
+    },
+    "intensity_scales": {
+      "Braking": {
+        "event_intensity": 0.142
+      },
+      "Acceleration": {
+        "event_intensity": 0.1325
+      },
+      "Turning": {
+        "lateral_excursion": 0.186,
+        "yaw_variability": 0.0434552873240143
+      }
+    },
+    "predicted_event_window_counts": {
+      "Braking": 376,
+      "Acceleration": 226,
+      "Turning": 274
+    },
+    "sensor_medians": {
+      "ax_kf_min": -0.049,
+      "ax_kf_max": 0.024,
+      "ay_kf_min": -0.027,
+      "ay_kf_max": 0.025,
+      "yaw_std": 0.0043749285708454
+    },
+    "development_score_quantiles": [
+      0.33,
+      0.67
+    ],
+    "low_cutoff": 11.71317448764424,
+    "high_cutoff": 36.04635283436889,
+    "development_scores_are_in_sample": true,
+    "category_ties": false
+  },
+  "formula": "R_t = (100/3) * sum_k(f_tk * (0.5 + 0.5*I_tk)); frequency-only baseline = (100/3) * sum_k(f_tk)",
+  "weights": {
+    "event_type": {
+      "Braking": 0.3333333333333333,
+      "Acceleration": 0.3333333333333333,
+      "Turning": 0.3333333333333333
+    },
+    "frequency": 0.5,
+    "intensity": 0.5
+  },
+  "intensity_definitions": {
+    "Braking": "max(0, -polarity*ax_kf_min) if direction verified; otherwise max(abs(ax_kf_min), abs(ax_kf_max))",
+    "Acceleration": "max(0, polarity*ax_kf_max) if direction verified; otherwise max(abs(ax_kf_min), abs(ax_kf_max))",
+    "Turning": "0.5*clip(lateral_excursion/Q90_dev,0,1) + 0.5*clip(abs(yaw_std)/Q90_dev,0,1)",
+    "lateral_excursion": "max(abs(ay_kf_min), abs(ay_kf_max))"
+  },
+  "outlier_handling": "Normalize by development-only 90th percentiles and clip each normalized frequency/intensity to [0,1].",
+  "zero_predicted_events": "Set class frequency, intensity, and combined class contribution to zero.",
+  "relative_categories": {
+    "Low": "score <= 11.71317448764424",
+    "Moderate": "11.71317448764424 < score <= 36.04635283436889",
+    "High": "score > 36.04635283436889",
+    "cutoffs_fit_on": "30 development trip scores only"
+  },
+  "limitations": [
+    "Experimental relative behavior indicator, not accident probability.",
+    "A predicted braking, acceleration, or turning event is not automatically dangerous.",
+    "The classifier's development predictions are in-sample.",
+    "Risk categories are relative to the development data.",
+    "Feature summaries do not capture raw-event duration or jerk."
+  ]
+}

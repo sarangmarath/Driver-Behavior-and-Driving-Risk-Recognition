@@ -1,0 +1,3 @@
+indicator,aggressive_trip_count,normal_trip_count,aggressive_normal_pairs,roc_auc,exact_two_sided_auc_permutation_p,mean_aggressive_minus_normal,median_aggressive_minus_normal,correctly_ranked_pairs,tied_pairs,incorrectly_ranked_pairs,pairwise_ranking_pct_ties_half_credit,threshold_dependent_metrics
+combined,3,2,6,1.0,0.2,46.00503239083889,41.524871325263355,6,0,0,100.0,unavailable
+frequency_only,3,2,6,1.0,0.2,62.537072199639866,56.1532812547742,6,0,0,100.0,unavailable

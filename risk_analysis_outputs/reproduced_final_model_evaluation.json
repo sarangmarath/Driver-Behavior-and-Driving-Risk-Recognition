@@ -1,0 +1,116 @@
+{
+  "new_run": {
+    "accuracy": 0.9537428500373042,
+    "macro_f1": 0.6591988323248532,
+    "balanced_accuracy": 0.7626521415333678,
+    "per_class": {
+      "Normal": {
+        "precision": 0.9879855826992391,
+        "recall": 0.9650541139653149,
+        "f1-score": 0.9763852242744063,
+        "support": 7669.0
+      },
+      "Braking": {
+        "precision": 0.6491228070175439,
+        "recall": 0.9308176100628931,
+        "f1-score": 0.7648578811369509,
+        "support": 159.0
+      },
+      "Turning": {
+        "precision": 0.30612244897959184,
+        "recall": 0.39473684210526316,
+        "f1-score": 0.3448275862068966,
+        "support": 114.0
+      },
+      "Acceleration": {
+        "precision": 0.4318181818181818,
+        "recall": 0.76,
+        "f1-score": 0.5507246376811594,
+        "support": 100.0
+      }
+    },
+    "classification_report": {
+      "Normal": {
+        "precision": 0.9879855826992391,
+        "recall": 0.9650541139653149,
+        "f1-score": 0.9763852242744063,
+        "support": 7669.0
+      },
+      "Braking": {
+        "precision": 0.6491228070175439,
+        "recall": 0.9308176100628931,
+        "f1-score": 0.7648578811369509,
+        "support": 159.0
+      },
+      "Turning": {
+        "precision": 0.30612244897959184,
+        "recall": 0.39473684210526316,
+        "f1-score": 0.3448275862068966,
+        "support": 114.0
+      },
+      "Acceleration": {
+        "precision": 0.4318181818181818,
+        "recall": 0.76,
+        "f1-score": 0.5507246376811594,
+        "support": 100.0
+      },
+      "accuracy": 0.9537428500373042,
+      "macro avg": {
+        "precision": 0.5937622551286391,
+        "recall": 0.7626521415333678,
+        "f1-score": 0.6591988323248532,
+        "support": 8042.0
+      },
+      "weighted avg": {
+        "precision": 0.9647042697589835,
+        "recall": 0.9537428500373042,
+        "f1-score": 0.957957410676063,
+        "support": 8042.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        7401,
+        73,
+        101,
+        94
+      ],
+      [
+        11,
+        148,
+        0,
+        0
+      ],
+      [
+        56,
+        7,
+        45,
+        6
+      ],
+      [
+        23,
+        0,
+        1,
+        76
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Normal",
+      "Braking",
+      "Turning",
+      "Acceleration"
+    ],
+    "held_out_rows": 8042
+  },
+  "notebook_recorded_metrics": {
+    "accuracy": 0.954,
+    "macro_f1": 0.6532,
+    "balanced_accuracy": 0.7522
+  },
+  "difference_from_notebook": {
+    "accuracy": -0.0002571499626957685,
+    "macro_f1": 0.005998832324853209,
+    "balanced_accuracy": 0.01045214153336782
+  },
+  "comparison_note": "Notebook metrics are rounded to four decimal places. The notebook does not record package versions, so differences can reflect software-version/default implementation changes."
+}

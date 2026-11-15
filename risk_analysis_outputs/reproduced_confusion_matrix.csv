@@ -1,0 +1,5 @@
+actual,Normal,Braking,Turning,Acceleration
+Normal,7401,73,101,94
+Braking,11,148,0,0
+Turning,56,7,45,6
+Acceleration,23,0,1,76

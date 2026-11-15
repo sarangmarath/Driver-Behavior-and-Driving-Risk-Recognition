@@ -1,0 +1,14 @@
+{
+  "combined": {
+    "status": "unavailable",
+    "matrix": null,
+    "threshold": null,
+    "reason": "No development-fixed binary AGGRESSIVE-vs-NORMAL threshold is stored in Phase 3. The Phase 3 Low/Moderate/High score cutoffs are relative categories, not binary decision thresholds. No threshold was selected from held-out labels."
+  },
+  "frequency_only": {
+    "status": "unavailable",
+    "matrix": null,
+    "threshold": null,
+    "reason": "No development-fixed binary AGGRESSIVE-vs-NORMAL threshold is stored in Phase 3. The Phase 3 Low/Moderate/High score cutoffs are relative categories, not binary decision thresholds. No threshold was selected from held-out labels."
+  }
+}

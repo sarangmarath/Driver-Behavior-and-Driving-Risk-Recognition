@@ -1,0 +1,7 @@
+setting,macro_F1,balanced_acc,accuracy
+"UAH -> UAH (unseen trips, reference)",0.4463,,
+Majority-class baseline on Zenodo,0.3101,0.3333,0.8696
+A) UAH -> Zenodo (strict zero-shot),0.3726,0.5178,0.5763
+B) UAH -> Zenodo (per-dataset z-score),0.3895,0.3832,0.8222
+"(UAH -> UAH, per-trip normalised, reference)",0.4194,,
+C) UAH -> Zenodo (per-trip normalisation),0.4026,0.3992,0.8144

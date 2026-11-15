@@ -1,0 +1,93 @@
+{
+  "model_sha256_verified": "092756498ea87c18276985493b807eeb4765fdf6827cd0aeee7f6c7fb2301268",
+  "held_out_trip_count": 10,
+  "held_out_row_count": 8042,
+  "behavior_rate_summary": [
+    {
+      "behavior": "NORMAL",
+      "trip_count": 2,
+      "actual_non_normal_event_rate_pct": 2.0665880063297566,
+      "predicted_non_normal_event_rate_pct": 1.717417355867858,
+      "difference_pp": -0.34917065046189855
+    },
+    {
+      "behavior": "AGGRESSIVE",
+      "trip_count": 3,
+      "actual_non_normal_event_rate_pct": 11.11935944799759,
+      "predicted_non_normal_event_rate_pct": 18.082787808821205,
+      "difference_pp": 6.963428360823615
+    },
+    {
+      "behavior": "DROWSY",
+      "trip_count": 5,
+      "actual_non_normal_event_rate_pct": 1.6008739504174794,
+      "predicted_non_normal_event_rate_pct": 2.0629622724343046,
+      "difference_pp": 0.46208832201682526
+    }
+  ],
+  "trip_level_error_summary": [
+    {
+      "event": "Braking",
+      "trip_count": 10,
+      "mean_actual_rate_pct": 2.0001445239397513,
+      "mean_predicted_rate_pct": 2.903588219638664,
+      "mean_error_pp": 0.9034436956989133,
+      "mean_absolute_error_pp": 0.9034436956989133,
+      "root_mean_squared_error_pp": 1.2842597740794828,
+      "overpredicted_trips": 9,
+      "underpredicted_trips": 0,
+      "equal_rate_trips": 1
+    },
+    {
+      "event": "Acceleration",
+      "trip_count": 10,
+      "mean_actual_rate_pct": 1.2050243648275578,
+      "mean_predicted_rate_pct": 2.2260316174751056,
+      "mean_error_pp": 1.0210072526475475,
+      "mean_absolute_error_pp": 1.1405905757137778,
+      "root_mean_squared_error_pp": 2.114984206543387,
+      "overpredicted_trips": 5,
+      "underpredicted_trips": 3,
+      "equal_rate_trips": 2
+    },
+    {
+      "event": "Turning",
+      "trip_count": 10,
+      "mean_actual_rate_pct": 1.3443935221066599,
+      "mean_predicted_rate_pct": 1.670181112923316,
+      "mean_error_pp": 0.3257875908166562,
+      "mean_absolute_error_pp": 0.9477517837631989,
+      "root_mean_squared_error_pp": 1.4589560882505697,
+      "overpredicted_trips": 6,
+      "underpredicted_trips": 4,
+      "equal_rate_trips": 0
+    },
+    {
+      "event": "Non-normal",
+      "trip_count": 10,
+      "mean_actual_rate_pct": 4.549562410873969,
+      "mean_predicted_rate_pct": 6.799800950037087,
+      "mean_error_pp": 2.250238539163117,
+      "mean_absolute_error_pp": 2.597276585881675,
+      "root_mean_squared_error_pp": 4.048382100684268,
+      "overpredicted_trips": 8,
+      "underpredicted_trips": 2,
+      "equal_rate_trips": 0
+    }
+  ],
+  "aggressive_vs_normal": {
+    "actual_aggressive_mean_non_normal_rate_pct": 11.11935944799759,
+    "actual_normal_mean_non_normal_rate_pct": 2.0665880063297566,
+    "predicted_aggressive_mean_non_normal_rate_pct": 18.082787808821205,
+    "predicted_normal_mean_non_normal_rate_pct": 1.717417355867858,
+    "predicted_trend_preserved": true
+  },
+  "turning_prediction": {
+    "mean_actual_rate_pct": 1.3443935221066599,
+    "mean_predicted_rate_pct": 1.670181112923316,
+    "mean_error_pp": 0.3257875908166562,
+    "overpredicted_trips": 6,
+    "underpredicted_trips": 4
+  },
+  "risk_score_note": "These are event-frequency estimates only; they are not validated risk scores."
+}

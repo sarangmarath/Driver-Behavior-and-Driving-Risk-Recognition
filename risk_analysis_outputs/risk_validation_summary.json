@@ -1,0 +1,109 @@
+{
+  "calibration_frozen_before_heldout_behavior_evaluation": true,
+  "heldout_trip_count": 10,
+  "heldout_row_count": 8042,
+  "heldout_scores_by_behavior": [
+    {
+      "behavior": "NORMAL",
+      "trip_count": 2,
+      "combined_mean": 14.223101815463185,
+      "combined_median": 14.223101815463185,
+      "frequency_only_mean": 18.612972819466705,
+      "high_category_trips": 0
+    },
+    {
+      "behavior": "AGGRESSIVE",
+      "trip_count": 3,
+      "combined_mean": 60.22813420630208,
+      "combined_median": 55.74797314072654,
+      "frequency_only_mean": 81.15004501910657,
+      "high_category_trips": 3
+    },
+    {
+      "behavior": "DROWSY",
+      "trip_count": 5,
+      "combined_mean": 16.146914510062874,
+      "combined_median": 12.68184237741358,
+      "frequency_only_mean": 21.395567222067744,
+      "high_category_trips": 0
+    }
+  ],
+  "aggressive_vs_normal": {
+    "aggressive_mean_combined_indicator": 60.22813420630208,
+    "normal_mean_combined_indicator": 14.223101815463185,
+    "difference_points": 46.00503239083889,
+    "aggressive_mean_higher": true
+  },
+  "frequency_only_vs_combined": {
+    "mean_frequency_only_indicator": 38.765391680659185,
+    "mean_combined_indicator": 28.986517880014695,
+    "mean_combined_minus_frequency_only": -9.778873800644487,
+    "per_behavior": [
+      {
+        "behavior": "NORMAL",
+        "trip_count": 2,
+        "frequency_only_mean": 18.612972819466705,
+        "combined_mean": 14.223101815463185
+      },
+      {
+        "behavior": "AGGRESSIVE",
+        "trip_count": 3,
+        "frequency_only_mean": 81.15004501910657,
+        "combined_mean": 60.22813420630208
+      },
+      {
+        "behavior": "DROWSY",
+        "trip_count": 5,
+        "frequency_only_mean": 21.395567222067744,
+        "combined_mean": 16.146914510062874
+      }
+    ]
+  },
+  "known_classifier_event_overprediction": {
+    "Braking": {
+      "mean_actual_trip_rate_pct": 2.0001445239397517,
+      "mean_predicted_trip_rate_pct": 2.903588219638665,
+      "mean_error_percentage_points": 0.9034436956989137,
+      "overpredicted_trips": 9,
+      "underpredicted_trips": 0,
+      "equal_rate_trips": 1
+    },
+    "Acceleration": {
+      "mean_actual_trip_rate_pct": 1.2050243648275578,
+      "mean_predicted_trip_rate_pct": 2.2260316174751056,
+      "mean_error_percentage_points": 1.0210072526475478,
+      "overpredicted_trips": 5,
+      "underpredicted_trips": 3,
+      "equal_rate_trips": 2
+    },
+    "Turning": {
+      "mean_actual_trip_rate_pct": 1.3443935221066599,
+      "mean_predicted_trip_rate_pct": 1.670181112923316,
+      "mean_error_percentage_points": 0.32578759081665604,
+      "overpredicted_trips": 6,
+      "underpredicted_trips": 4,
+      "equal_rate_trips": 0
+    }
+  },
+  "warnings": [
+    "This is an experimental relative driving-behavior indicator, not a validated accident probability.",
+    "A predicted braking, acceleration, or turning event is not automatically dangerous.",
+    "Development predictions are in-sample and are used only for development calibration.",
+    "Low/Moderate/High thresholds are relative to development scores and are not universal risk cutoffs.",
+    "Behavior comparisons are descriptive on only 10 held-out trips and were not used to tune scoring.",
+    "Longitudinal polarity was not reliably established; absolute excursion is used for braking and acceleration intensity.",
+    "Held-out event predictions show mean overprediction for one or more event classes: {'Braking': {'mean_actual_trip_rate_pct': 2.0001445239397517, 'mean_predicted_trip_rate_pct': 2.903588219638665, 'mean_error_percentage_points': 0.9034436956989137, 'overpredicted_trips': 9, 'underpredicted_trips': 0, 'equal_rate_trips': 1}, 'Acceleration': {'mean_actual_trip_rate_pct': 1.2050243648275578, 'mean_predicted_trip_rate_pct': 2.2260316174751056, 'mean_error_percentage_points': 1.0210072526475478, 'overpredicted_trips': 5, 'underpredicted_trips': 3, 'equal_rate_trips': 2}, 'Turning': {'mean_actual_trip_rate_pct': 1.3443935221066599, 'mean_predicted_trip_rate_pct': 1.670181112923316, 'mean_error_percentage_points': 0.32578759081665604, 'overpredicted_trips': 6, 'underpredicted_trips': 4, 'equal_rate_trips': 0}}."
+  ],
+  "validation_checks": {
+    "model_sha256_matches_metadata": true,
+    "29_features_match_saved_order": true,
+    "development_test_trip_ids_disjoint": true,
+    "30_development_and_10_heldout_trips": true,
+    "expected_split_row_counts": true,
+    "risk_scores_finite_and_in_0_100": true,
+    "development_and_heldout_predictions_deterministic": true,
+    "configuration_matches_metadata": true,
+    "axis_direction_verified_or_fallback_documented": true,
+    "behavior_used_only_after_scoring": true
+  }
+}

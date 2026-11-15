@@ -1,0 +1,120 @@
+{
+  "scope": "Original 10 held-out trips only.",
+  "binary_behavior_definition": {
+    "positive": "AGGRESSIVE",
+    "negative": "NORMAL",
+    "excluded_from_binary_analysis": "DROWSY",
+    "aggressive_trip_count": 3,
+    "normal_trip_count": 2,
+    "drowsy_trip_count_descriptive_only": 5,
+    "aggressive_normal_pair_count": 6
+  },
+  "phase3_relative_categories_not_binary_thresholds": {
+    "Low": "score <= 11.71317448764424",
+    "Moderate": "11.71317448764424 < score <= 36.04635283436889",
+    "High": "score > 36.04635283436889",
+    "cutoffs_fit_on": "30 development trip scores only"
+  },
+  "binary_threshold": {
+    "value": null,
+    "status": "not available",
+    "reason": "Phase 3 stored development-only Low/Moderate/High quantile cutoffs, but no separately constructed binary threshold.",
+    "threshold_dependent_metrics": "Balanced accuracy, precision, recall, F1, and confusion matrices are unavailable; no held-out threshold was chosen."
+  },
+  "indicator_results": {
+    "combined": {
+      "roc_auc": 1.0,
+      "exact_two_sided_auc_permutation_p": 0.2,
+      "auc_permutations": 10,
+      "pairwise_ranking": {
+        "correct_pairs": 6,
+        "ties": 0,
+        "incorrect_pairs": 0,
+        "total_pairs": 6,
+        "ranking_percentage": 100.0,
+        "tie_adjusted_ranking_percentage": 100.0
+      },
+      "threshold_dependent_metrics": {
+        "status": "unavailable",
+        "binary_threshold": null,
+        "balanced_accuracy": null,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "confusion_matrix": null,
+        "reason": "Phase 3 has no development-fixed binary AGGRESSIVE-vs-NORMAL threshold. Its Low/Moderate/High relative cutoffs are not binary decision thresholds; no held-out threshold was selected."
+      },
+      "roc_curve": {
+        "false_positive_rate": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "true_positive_rate": [
+          0.0,
+          0.3333333333333333,
+          1.0,
+          1.0
+        ],
+        "curve_auc": 1.0
+      }
+    },
+    "frequency_only": {
+      "roc_auc": 1.0,
+      "exact_two_sided_auc_permutation_p": 0.2,
+      "auc_permutations": 10,
+      "pairwise_ranking": {
+        "correct_pairs": 6,
+        "ties": 0,
+        "incorrect_pairs": 0,
+        "total_pairs": 6,
+        "ranking_percentage": 100.0,
+        "tie_adjusted_ranking_percentage": 100.0
+      },
+      "threshold_dependent_metrics": {
+        "status": "unavailable",
+        "binary_threshold": null,
+        "balanced_accuracy": null,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "confusion_matrix": null,
+        "reason": "Phase 3 has no development-fixed binary AGGRESSIVE-vs-NORMAL threshold. Its Low/Moderate/High relative cutoffs are not binary decision thresholds; no held-out threshold was selected."
+      },
+      "roc_curve": {
+        "false_positive_rate": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "true_positive_rate": [
+          0.0,
+          0.3333333333333333,
+          1.0,
+          1.0
+        ],
+        "curve_auc": 1.0
+      }
+    }
+  },
+  "drowsy_descriptive_summary": [
+    {
+      "behavior": "DROWSY",
+      "trip_count": 5,
+      "combined_mean": 16.14691451006287,
+      "combined_median": 12.68184237741358,
+      "frequency_only_mean": 21.395567222067744,
+      "frequency_only_median": 17.367506176756255
+    }
+  ],
+  "comparison": {
+    "combined_minus_frequency_only_roc_auc": 0.0,
+    "combined_minus_frequency_only_pairwise_ranking_percentage_points": 0.0,
+    "result": "no observed discrimination improvement; ROC-AUC and pairwise ranking are tied",
+    "interpretation_note": "Numerically smaller or larger scores do not establish better discrimination; compare rank-based metrics."
+  },
+  "small_sample_note": "The binary comparison has 3 AGGRESSIVE and 2 NORMAL trips, only 6 cross-group pairs. Exact two-sided label-permutation p-values are reported for AUC; estimates are highly uncertain and descriptive.",
+  "risk_interpretation_limit": "These are experimental driving-behavior indicators, not validated accident-risk probabilities."
+}
