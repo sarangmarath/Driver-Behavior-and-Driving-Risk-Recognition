@@ -1,6 +1,7 @@
 # Dataset - do not upload to GitHub
 UAH-DRIVESET-v1/
 UAH-DRIVESET-v1.zip
+notebooks/external_validation/zenodo_dataset/
 
 # Python
 __pycache__/
@@ -13,11 +14,6 @@ __pycache__/
 .venv/
 venv/
 env/
-
-# Model files
-models/
-*.joblib
-*.pkl
 
 # OS / editor files
 .DS_Store
